@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mysticraft:raw_platinum"
+  },
+  "result": "mysticraft:platinum_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

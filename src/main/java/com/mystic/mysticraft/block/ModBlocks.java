@@ -38,6 +38,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(5.5F, 4.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE).color(MaterialColor.DEEPSLATE)),
             MOD_TAB);
+    public static final RegistryObject<Block> RAW_PLATINUM_BLOCK = registerBlock("raw_platinum_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4.5F, 3.0F)
+                    .requiresCorrectToolForDrops()), MOD_TAB);
 
     /**
      * This will only register a block which is rendered in the world.

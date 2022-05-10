@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mysticraft:platinum_nugget"
+    }
+  },
+  "result": {
+    "item": "mysticraft:platinum_ingot"
+  }
+}
