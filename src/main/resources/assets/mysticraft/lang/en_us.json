@@ -2,9 +2,11 @@
   "item.mysticraft.platinum_ingot": "Platinum Ingot",
   "item.mysticraft.platinum_nugget": "Platinum Nugget",
   "item.mysticraft.raw_platinum": "Raw Platinum",
+  "item.mysticraft.dowsing_rod": "Dowsing Rod",
   "block.mysticraft.platinum_block": "Platinum Block",
   "block.mysticraft.platinum_ore": "Platinum Ore",
   "block.mysticraft.deepslate_platinum_ore": "Deepslate Platinum Ore",
   "block.mysticraft.raw_platinum_block": "Raw Platinum Block",
-  "itemGroup.mysticraft": "Mysticraft"
+  "itemGroup.mysticraft": "Mysticraft",
+  "item.mysticraft.dowsing_rod.no_valuables": "No valuables found."
 }

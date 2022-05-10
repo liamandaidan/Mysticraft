@@ -1,6 +1,7 @@
 package com.mystic.mysticraft.item;
 
 import com.mystic.mysticraft.Mysticraft;
+import com.mystic.mysticraft.item.custom.DowsingRodItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +21,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(MOD_TAB)));
     public static final RegistryObject<Item> RAW_PLATINUM = ITEMS.register("raw_platinum",
             () -> new Item(new Item.Properties().tab(MOD_TAB)));
+    public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
+            () -> new DowsingRodItem(new Item.Properties().tab(MOD_TAB).stacksTo(1).durability(16)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
