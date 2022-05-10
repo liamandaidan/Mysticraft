@@ -1,6 +1,7 @@
 package com.mystic.mysticraft.block;
 
 import com.mystic.mysticraft.Mysticraft;
+import com.mystic.mysticraft.item.ModCreativeModeTab;
 import com.mystic.mysticraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,7 +23,8 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Mysticraft.MOD_ID);
-    public static final CreativeModeTab MOD_TAB = CreativeModeTab.TAB_MISC;
+
+    private static final CreativeModeTab MOD_TAB = ModCreativeModeTab.MYSTIC_TAB;
 
     public static final RegistryObject<Block> PLATINUM_BLOCK = registerBlock("platinum_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(5f)
