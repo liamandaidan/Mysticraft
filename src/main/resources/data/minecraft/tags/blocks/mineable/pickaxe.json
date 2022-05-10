@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+  "mysticraft:platinum_block",
+  "mysticraft:raw_platinum_block",
+  "mysticraft:platinum_ore",
+  "mysticraft:deepslate_platinum_ore"
+  ]
+}
