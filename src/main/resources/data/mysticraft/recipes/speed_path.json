@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X#",
+    "X#X",
+    "#X#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    },
+    "X": {
+      "item": "mysticraft:platinum_ingot"
+    }
+  },
+  "result": {
+    "item": "mysticraft:speed_path",
+    "count": 4
+  }
+}

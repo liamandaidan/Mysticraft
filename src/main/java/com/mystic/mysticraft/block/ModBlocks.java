@@ -1,6 +1,7 @@
 package com.mystic.mysticraft.block;
 
 import com.mystic.mysticraft.Mysticraft;
+import com.mystic.mysticraft.block.custom.SpeedPath;
 import com.mystic.mysticraft.item.ModCreativeModeTab;
 import com.mystic.mysticraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -41,7 +42,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> RAW_PLATINUM_BLOCK = registerBlock("raw_platinum_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4.5F, 3.0F)
                     .requiresCorrectToolForDrops()), MOD_TAB);
-
+    public static final RegistryObject<Block> SPEED_PATH = registerBlock("speed_path",
+            () -> new SpeedPath(BlockBehaviour.Properties.of(Material.STONE).strength(2F)
+                    .requiresCorrectToolForDrops()), MOD_TAB);
     /**
      * This will only register a block which is rendered in the world.
      *
