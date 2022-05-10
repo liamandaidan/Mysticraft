@@ -1,6 +1,7 @@
 package com.mystic.mysticraft;
 
 import com.mojang.logging.LogUtils;
+import com.mystic.mysticraft.block.ModBlocks;
 import com.mystic.mysticraft.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -31,7 +32,7 @@ public class Mysticraft {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         //for each type of entity(items, etc we have to register it to eventbus)
         ModItems.register(eventBus);
-
+        ModBlocks.register(eventBus);
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
