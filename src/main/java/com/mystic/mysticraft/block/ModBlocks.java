@@ -4,9 +4,10 @@ import com.mystic.mysticraft.Mysticraft;
 import com.mystic.mysticraft.block.custom.SpeedPath;
 import com.mystic.mysticraft.item.ModCreativeModeTab;
 import com.mystic.mysticraft.item.ModItems;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -17,7 +18,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -44,7 +47,9 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()), MOD_TAB);
     public static final RegistryObject<Block> SPEED_PATH = registerBlock("speed_path",
             () -> new SpeedPath(BlockBehaviour.Properties.of(Material.STONE).strength(2F)
-                    .requiresCorrectToolForDrops()), MOD_TAB);
+                    .requiresCorrectToolForDrops()), MOD_TAB,
+            "tooltip.block.speed_path");
+
     /**
      * This will only register a block which is rendered in the world.
      *
@@ -72,6 +77,45 @@ public class ModBlocks {
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
         return ModItems.ITEMS.register((name), () -> new BlockItem(block.get(),
                 new Item.Properties().tab(tab)));
+    }
+
+
+    /**
+     * This will only register a block which is rendered in the world.
+     *
+     * @param name    block name
+     * @param block   block type
+     * @param tab     tab the block belongs in
+     * @param <T>     extends type block
+     * @param tooltip String
+     * @return RegistryObject
+     */
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab,
+                                                                     String tooltip) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tab, tooltip);
+        return toReturn;
+    }
+
+    /**
+     * Returns a registered block item aka when broken.
+     *
+     * @param name    block name
+     * @param block   block type
+     * @param tab     tab the block belongs in
+     * @param <T>     extends block type
+     * @param tooltip String
+     * @return a registered block via eventBus
+     */
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
+                                                                            CreativeModeTab tab, String tooltip) {
+        return ModItems.ITEMS.register((name), () -> new BlockItem(block.get(),
+                new Item.Properties().tab(tab)){
+            @Override
+            public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
+                pTooltip.add(new TranslatableComponent(tooltip));
+            }
+        });
     }
 
     public static void register(IEventBus eventBus) {

@@ -4,11 +4,15 @@
   "item.mysticraft.raw_platinum": "Raw Platinum",
   "item.mysticraft.dowsing_rod": "Dowsing Rod",
   "item.mysticraft.coal_chunk": "Coal Chunk",
+  "item.mysticraft.turnip": "Turnip",
   "block.mysticraft.platinum_block": "Platinum Block",
   "block.mysticraft.platinum_ore": "Platinum Ore",
   "block.mysticraft.deepslate_platinum_ore": "Deepslate Platinum Ore",
   "block.mysticraft.raw_platinum_block": "Raw Platinum Block",
   "block.mysticraft.speed_path": "Speed Path",
   "itemGroup.mysticraft": "Mysticraft",
-  "item.mysticraft.dowsing_rod.no_valuables": "No valuables found."
+  "item.mysticraft.dowsing_rod.no_valuables": "No valuables found.",
+  "tooltip.mysticraft.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",
+  "tooltip.mysticraft.dowsing_rod.tooltip": "Press §e§oShift§r for more Info!",
+  "tooltip.block.speed_path": "Player movement speed increased on path."
 }

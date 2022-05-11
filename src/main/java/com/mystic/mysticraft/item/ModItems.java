@@ -26,6 +26,9 @@ public class ModItems {
             () -> new DowsingRodItem(new Item.Properties().tab(MOD_TAB).stacksTo(1).durability(16)));
     public static final RegistryObject<Item> COAL_CHUNK = ITEMS.register("coal_chunk",
             () -> new CoalChunkItem(new Item.Properties().tab(MOD_TAB)));
+    public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
+            () -> new Item(new Item.Properties().tab(MOD_TAB).food(ModFoods.TURNIP)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
