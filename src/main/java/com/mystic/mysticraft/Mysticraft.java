@@ -3,6 +3,7 @@ package com.mystic.mysticraft;
 import com.mojang.logging.LogUtils;
 import com.mystic.mysticraft.block.ModBlocks;
 import com.mystic.mysticraft.item.ModItems;
+import com.mystic.mysticraft.util.ModTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;

@@ -1,6 +1,6 @@
 package com.mystic.mysticraft.item.custom;
 
-import com.mystic.mysticraft.block.ModBlocks;
+import com.mystic.mysticraft.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -14,7 +14,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -24,7 +23,6 @@ public class DowsingRodItem extends Item {
         super(pProperties);
     }
     //right click with item, look down in ground
-    //print coords
 
 
     @Override
@@ -38,7 +36,7 @@ public class DowsingRodItem extends Item {
             for (int i = 0; i <= positionClicked.getY() + 64; i++) {
                 //get the block in the loop ranging from -64 Y to your current Y click.
                 Block blockBelow = pContext.getLevel().getBlockState(positionClicked.below(i)).getBlock();
-                if (isValueableBlock(blockBelow)) {
+                if (isValuableBlock(blockBelow)) {
                     outputValuableCoordinates(positionClicked.below(i), player, blockBelow);
                     foundBlock = true;
                     break;
@@ -73,7 +71,7 @@ public class DowsingRodItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         //we want to display hold shift for more info
-        //then display
+        //than display
         if(Screen.hasShiftDown()){
             pTooltipComponents.add(new TranslatableComponent("tooltip.mysticraft.dowsing_rod.tooltip.shift"));
         }else{
@@ -87,13 +85,9 @@ public class DowsingRodItem extends Item {
      * @param block The block to compare
      * @return boolean of if block = valuable
      */
-    private boolean isValueableBlock(Block block) {
+    private boolean isValuableBlock(Block block) {
 
-        return block == Blocks.COAL_ORE || block == Blocks.COPPER_ORE ||
-                block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE ||
-                block == Blocks.GOLD_ORE || block == Blocks.DEEPSLATE_GOLD_ORE ||
-                block == Blocks.DEEPSLATE_DIAMOND_ORE || block == Blocks.DEEPSLATE_IRON_ORE ||
-                block == Blocks.DEEPSLATE_COAL_ORE || block == Blocks.DEEPSLATE_COPPER_ORE;
+        return ModTags.Blocks.DOWSING_ROD_VALUABLES.equals(block);
 
     }
 

@@ -49,6 +49,9 @@ public class ModBlocks {
             () -> new SpeedPath(BlockBehaviour.Properties.of(Material.STONE).strength(2F)
                     .requiresCorrectToolForDrops()), MOD_TAB,
             "tooltip.block.speed_path");
+    public static final RegistryObject<Block> CHERRY_WOOD_PLANKS = registerBlock("cherry_wood_planks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
+                    3.0F).sound(SoundType.WOOD)), MOD_TAB);
 
     /**
      * This will only register a block which is rendered in the world.
@@ -110,7 +113,7 @@ public class ModBlocks {
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                             CreativeModeTab tab, String tooltip) {
         return ModItems.ITEMS.register((name), () -> new BlockItem(block.get(),
-                new Item.Properties().tab(tab)){
+                new Item.Properties().tab(tab)) {
             @Override
             public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
                 pTooltip.add(new TranslatableComponent(tooltip));
