@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mysticraft:block/platinum_slab"
+    },
+    "type=double": {
+      "model": "mysticraft:block/platinum_block"
+    },
+    "type=top": {
+      "model": "mysticraft:block/platinum_slab_top"
+    }
+  }
+}

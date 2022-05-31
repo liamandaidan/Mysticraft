@@ -8,9 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -52,6 +50,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHERRY_WOOD_PLANKS = registerBlock("cherry_wood_planks",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
                     3.0F).sound(SoundType.WOOD)), MOD_TAB);
+    public static final RegistryObject<Block> PLATINUM_STAIRS = registerBlock("platinum_stairs",
+            () -> new StairBlock(() -> ModBlocks.PLATINUM_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(5F)
+                            .requiresCorrectToolForDrops().color(MaterialColor.METAL)),
+            MOD_TAB);
+    public static final RegistryObject<Block> PLATINUM_SLAB = registerBlock("platinum_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5F)
+                    .requiresCorrectToolForDrops().color(MaterialColor.METAL)),
+            MOD_TAB);
 
     /**
      * This will only register a block which is rendered in the world.
