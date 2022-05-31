@@ -10,7 +10,7 @@
       "item": "minecraft:stone"
     },
     "X": {
-      "item": "mysticraft:platinum_ingot"
+      "tag": "forge:ingots/platinum"
     }
   },
   "result": {

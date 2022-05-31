@@ -3,6 +3,7 @@ package com.mystic.mysticraft.item.custom;
 import com.mystic.mysticraft.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -72,9 +73,9 @@ public class DowsingRodItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         //we want to display hold shift for more info
         //than display
-        if(Screen.hasShiftDown()){
+        if (Screen.hasShiftDown()) {
             pTooltipComponents.add(new TranslatableComponent("tooltip.mysticraft.dowsing_rod.tooltip.shift"));
-        }else{
+        } else {
             pTooltipComponents.add(new TranslatableComponent("tooltip.mysticraft.dowsing_rod.tooltip"));
         }
     }
@@ -86,8 +87,8 @@ public class DowsingRodItem extends Item {
      * @return boolean of if block = valuable
      */
     private boolean isValuableBlock(Block block) {
-
-        return ModTags.Blocks.DOWSING_ROD_VALUABLES.equals(block);
+        //this will be used to check for our dowsing rod
+        return Registry.BLOCK.getHolderOrThrow(Registry.BLOCK.getResourceKey(block).get()).is(ModTags.Blocks.DOWSING_ROD_VALUABLES);
 
     }
 

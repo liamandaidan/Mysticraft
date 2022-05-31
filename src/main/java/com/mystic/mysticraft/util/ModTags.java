@@ -18,19 +18,22 @@ public class ModTags {
 
     public class Blocks {
         public static final TagKey<Block> DOWSING_ROD_VALUABLES = tag("dowsing_rod_valuables");
-    }
 
-    private static TagKey<Block> tag(String name) {
-        return BlockTags.create(new ResourceLocation(Mysticraft.MOD_ID, name));
-    }
 
-    private static TagKey<Block> forgeTag(String name) {
-        return BlockTags.create(new ResourceLocation("forge", name));
+        private static TagKey<Block> tag(String name) {
+            return BlockTags.create(new ResourceLocation(Mysticraft.MOD_ID, name));
+        }
+
+        private static TagKey<Block> forgeTag(String name) {
+
+            return BlockTags.create(new ResourceLocation("forge", name));
+        }
     }
 
     public static class Items {
 
         public static final TagKey<Item> PLATINUM_INGOT = forgeTag("ingots/platinum");
+        public static final TagKey<Item> PLATINUM_NUGGETS = forgeTag("nuggets/platinum");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(Mysticraft.MOD_ID, name));
