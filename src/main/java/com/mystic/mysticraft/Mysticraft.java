@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import com.mystic.mysticraft.block.ModBlocks;
 import com.mystic.mysticraft.item.ModItems;
 import com.mystic.mysticraft.util.ModTags;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,9 +37,14 @@ public class Mysticraft {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         eventBus.addListener(this::setup);
-
+        eventBus.addListener(this::clientSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void clientSetup(final FMLCommonSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_WOOD_DOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_WOOD_TRAPDOOR.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event) {

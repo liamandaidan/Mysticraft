@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "mysticraft:cherry_wood_planks"
+    }
+  },
+  "result": {
+    "item": "mysticraft:cherry_wood_pressureplate"
+  }
+}

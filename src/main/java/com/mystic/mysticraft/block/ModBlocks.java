@@ -75,6 +75,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHERRY_WOOD_WALL = registerBlock("cherry_wood_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
                     3.0F).sound(SoundType.WOOD)), MOD_TAB);
+    public static final RegistryObject<Block> CHERRY_WOOD_DOOR = registerBlock("cherry_wood_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
+                    3.0F).sound(SoundType.WOOD).noOcclusion()), MOD_TAB);
+    public static final RegistryObject<Block> CHERRY_WOOD_TRAPDOOR = registerBlock("cherry_wood_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
+                    3.0F).sound(SoundType.WOOD).noOcclusion()), MOD_TAB);
 
 
     /**

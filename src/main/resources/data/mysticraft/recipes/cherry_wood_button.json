@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticraft:cherry_wood_planks"
+    }
+  ],
+  "result": {
+    "item": "mysticraft:cherry_wood_button"
+  }
+}

@@ -18,6 +18,8 @@
   "block.mysticraft.cherry_wood_fence": "Cherry Wood Fence",
   "block.mysticraft.cherry_wood_fence_gate": "Cherry Wood Fence Gate",
   "block.mysticraft.cherry_wood_wall": "Cherry Wood Wall",
+  "block.mysticraft.cherry_wood_door": "Cherry Wood Door",
+  "block.mysticraft.cherry_wood_trapdoor": "Cherry Wood Trapdoor",
   "itemGroup.mysticraft": "Mysticraft",
   "item.mysticraft.dowsing_rod.no_valuables": "No valuables found.",
   "tooltip.mysticraft.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",
