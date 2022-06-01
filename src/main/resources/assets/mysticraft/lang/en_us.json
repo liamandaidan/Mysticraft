@@ -13,6 +13,8 @@
   "block.mysticraft.speed_path": "Speed Path",
   "block.mysticraft.platinum_stairs": "Platinum Stairs",
   "block.mysticraft.platinum_slab": "Platinum Slab",
+  "block.mysticraft.cherry_wood_button": "Cherry Wood Button",
+  "block.mysticraft.cherry_wood_pressure_plate": "Cherry Wood Pressure Plate",
   "itemGroup.mysticraft": "Mysticraft",
   "item.mysticraft.dowsing_rod.no_valuables": "No valuables found.",
   "tooltip.mysticraft.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",

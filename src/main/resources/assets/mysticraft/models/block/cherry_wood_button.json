@@ -1,0 +1,6 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "mysticraft:block/cherry_wood_planks"
+  }
+}

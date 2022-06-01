@@ -50,6 +50,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHERRY_WOOD_PLANKS = registerBlock("cherry_wood_planks",
             () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
                     3.0F).sound(SoundType.WOOD)), MOD_TAB);
+    public static final RegistryObject<Block> CHERRY_WOOD_BUTTON = registerBlock("cherry_wood_button",
+            () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
+                    3.0F).noCollission().sound(SoundType.WOOD)), MOD_TAB);
+    public static final RegistryObject<Block> CHERRY_WOOD_PRESSURE_PLATE = registerBlock("cherry_wood_pressure_plate",
+            () -> new PressurePlateBlock((PressurePlateBlock.Sensitivity.EVERYTHING), BlockBehaviour.Properties
+                    .of(Material.WOOD, MaterialColor.COLOR_PINK).noCollission().strength(2.0F,
+                            3.0F).sound(SoundType.WOOD)), MOD_TAB);
+
     public static final RegistryObject<Block> PLATINUM_STAIRS = registerBlock("platinum_stairs",
             () -> new StairBlock(() -> ModBlocks.PLATINUM_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.STONE).strength(5F)
