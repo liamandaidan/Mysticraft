@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "mysticraft:block/cherry_wood_planks"
+  }
+}

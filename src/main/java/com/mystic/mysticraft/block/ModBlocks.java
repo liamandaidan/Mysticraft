@@ -32,6 +32,15 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).strength(5f)
                     .requiresCorrectToolForDrops()),
             MOD_TAB);
+    public static final RegistryObject<Block> PLATINUM_STAIRS = registerBlock("platinum_stairs",
+            () -> new StairBlock(() -> ModBlocks.PLATINUM_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(5F)
+                            .requiresCorrectToolForDrops().color(MaterialColor.METAL)),
+            MOD_TAB);
+    public static final RegistryObject<Block> PLATINUM_SLAB = registerBlock("platinum_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5F)
+                    .requiresCorrectToolForDrops().color(MaterialColor.METAL)),
+            MOD_TAB);
     public static final RegistryObject<Block> PLATINUM_ORE = registerBlock("platinum_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4.5F, 3.0F)
                     .requiresCorrectToolForDrops()),
@@ -57,16 +66,16 @@ public class ModBlocks {
             () -> new PressurePlateBlock((PressurePlateBlock.Sensitivity.EVERYTHING), BlockBehaviour.Properties
                     .of(Material.WOOD, MaterialColor.COLOR_PINK).noCollission().strength(2.0F,
                             3.0F).sound(SoundType.WOOD)), MOD_TAB);
+    public static final RegistryObject<Block> CHERRY_WOOD_FENCE = registerBlock("cherry_wood_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
+                    3.0F).sound(SoundType.WOOD)), MOD_TAB);
+    public static final RegistryObject<Block> CHERRY_WOOD_FENCE_GATE = registerBlock("cherry_wood_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
+                    3.0F).sound(SoundType.WOOD)), MOD_TAB);
+    public static final RegistryObject<Block> CHERRY_WOOD_WALL = registerBlock("cherry_wood_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PINK).strength(2.0F,
+                    3.0F).sound(SoundType.WOOD)), MOD_TAB);
 
-    public static final RegistryObject<Block> PLATINUM_STAIRS = registerBlock("platinum_stairs",
-            () -> new StairBlock(() -> ModBlocks.PLATINUM_BLOCK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.STONE).strength(5F)
-                            .requiresCorrectToolForDrops().color(MaterialColor.METAL)),
-            MOD_TAB);
-    public static final RegistryObject<Block> PLATINUM_SLAB = registerBlock("platinum_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE).strength(5F)
-                    .requiresCorrectToolForDrops().color(MaterialColor.METAL)),
-            MOD_TAB);
 
     /**
      * This will only register a block which is rendered in the world.
