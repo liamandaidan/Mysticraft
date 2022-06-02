@@ -3,8 +3,7 @@ package com.mystic.mysticraft.item;
 import com.mystic.mysticraft.Mysticraft;
 import com.mystic.mysticraft.item.custom.CoalChunkItem;
 import com.mystic.mysticraft.item.custom.DowsingRodItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,6 +27,23 @@ public class ModItems {
             () -> new CoalChunkItem(new Item.Properties().tab(MOD_TAB)));
     public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
             () -> new Item(new Item.Properties().tab(MOD_TAB).food(ModFoods.TURNIP)));
+    /**
+     * Tools
+     */
+    public static final RegistryObject<Item> PLATINUM_SWORD = ITEMS.register("platinum_sword",
+            () -> new SwordItem(ModTiers.PLATINUM, 2, 0f,
+                    new Item.Properties().tab(MOD_TAB)));
+    public static final RegistryObject<Item> PLATINUM_PICKAXE = ITEMS.register("platinum_pickaxe",
+            () -> new PickaxeItem(ModTiers.PLATINUM, 2, 0f,
+                    new Item.Properties().tab(MOD_TAB)));
+    public static final RegistryObject<Item> PLATINUM_SHOVEL = ITEMS.register("platinum_shovel",
+            () -> new ShovelItem(ModTiers.PLATINUM, 2, 0f,
+                    new Item.Properties().tab(MOD_TAB)));
+    public static final RegistryObject<Item> PLATINUM_HOE = ITEMS.register("platinum_hoe",
+            () -> new HoeItem(ModTiers.PLATINUM, 2, 0f,
+                    new Item.Properties().tab(MOD_TAB)));
+    public static final RegistryObject<Item> PLATINUM_AXE = ITEMS.register("platinum_axe",
+            () -> new AxeItem(ModTiers.PLATINUM, 4, 0f, new Item.Properties().tab(MOD_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
